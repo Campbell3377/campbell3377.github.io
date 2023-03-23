@@ -1,76 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Psyche Demo</title>
-    <link rel="stylesheet" href="/style.css" type="text/css" />
-  </head>
-  <body>
-    <canvas id="bg"></canvas>
-    <main>
-      <header>
-        <h1>Psyche</h1>
-        <p>A Unique Metal-Rich Asteroid Orbiting the Sun Between Mars and Jupiter!</p>
-      </header>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Psyche</title>
+	<link rel="stylesheet" href="style.css">
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.0.2/dist/model-viewer.min.js"></script>
+    <script src="js/countdown.js"></script>
+     
+</head>
+<body>
+	<header>
+		<div class="container d-flex align-items-center">
+            <div class="logo">
+                <a  href="https://www.nasa.gov/" rel="noopener">
+                    <img src="https://psyche.asu.edu/wp-content/themes/psyche/static/img/nasa.svg" alt="NASA">
+                </a>
+                <span class="divider"></span>
+                <a href="https://psyche.asu.edu/">
+                    <img src="https://psyche.asu.edu/wp-content/themes/psyche/static/img/psyche.svg" alt="Psyche">
+                </a>
+            </div>
+        </div>
+	</header>
 
+    <div class="main">
+        <div class="wrapper">
+            <section class="iframe-section">
+                <div class="container-fluid d-flex align-items-center">
+                    <div class="iframe-wrapper">
+                        <iframe src="https://eyes.nasa.gov/apps/asteroids/#/asteroids/16_psyche"></iframe>
+                        <div class="text-wrapper">
+                            <!-- <div class="text-content"> -->
+                                <!-- <div class="content"> -->
+                                    <h2>eyes on psyche</h2>
+                                    <p>Deep within the terrestrial planets, including Earth, scientists infer the presence of metallic cores, but these lie unreachably far below the planets' rocky mantles and crusts. The asteroid Psyche offers a unique window into these building blocks of planet formation and the opportunity to investigate a previously unexplored type of world.</p>
+                                <!-- </div> -->
+                            <!-- </div>                   -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="container-fluid d-flex align-items-center">
+                <div class="countdown-wrapper">
+                    <h2 id="headline">Countdown to Launch Window</h2>
+                    <div id="countdown">
+                        <ul>
+                        <li><span id="days"></span>days</li>
+                        <li><span id="hours"></span>Hours</li>
+                        <li><span id="minutes"></span>Minutes</li>
+                        <li><span id="seconds"></span>Seconds</li>
+                        </ul>
+                    </div>
+                </div>               
+            </div>
+            <section class="model-section">
+                <div class="container-fluid d-flex align-items-center">
+                    <div class="model-wrapper">
+                        <div class="text-wrapper">
+                            <!-- <div class="text-content"> -->
+                                <!-- <div class="content"> -->
+                                    <h2>The Spacecraft</h2>
+                                    <p>The Psyche spacecraft and solar panels, which will be built by Maxar Technologies, are about the size of a singles tennis court. The body of the spacecraft is slightly bigger than a Smart Car and about as tall as a regulation basketball hoop. The spacecraft will include a Gamma Ray and Neutron Spectrometer, a Multispectral Imager, a Magnetometer and an x-band radio telecommunications system.</p>
+                                <!-- </div> -->
+                            <!-- </div>                   -->
+                        </div>
+                        <div class="psyche-wrapper">
+                            <model-viewer src="./psycheSat.glb"
+                            alt="Psyche asteroid in 3D"
+                            ar
+                            ar-modes="webxr scene-viewer quick-look"
+                            camera-controls
+                            style="width: 100%; height: 100%;">
+                            </model-viewer>
+                            <div class="model-caption">3D model of PSYCHE satellite, a mission to explore asteroid 16 Psyche. Credit: NASA Visualization Technology Applications and Development</div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
 
-      <blockquote>
-        <p></p>
-      </blockquote>
+            <div class="container-fluid d-flex align-items-center">
+                <section class="content-section">
+                    <h2>Key Dates / Timeline</h2>
+                    <p><b>Oct 5-25, 2023:</b> Launch Window</p>
+                    <p><b>2026:</b> Mars Flyby / Gravity Assist</p>
+                    <p><b>2029:</b> Satellite Arrives at Psyche Asteroid</p>
+                    <p>&emsp;<b>Orbit A: 56 Days (41 Orbits)</b> - Characterization</p>
+                    <p>&emsp;<b>Orbit B: 80 Days (169 Orbits)</b> - Topography</p>
+                    <p>&emsp;<b>Orbit C: 100 Days (362 Orbits)</b> - Gravity Science</p>
+                    <p>&emsp;<b>Orbit D: 100 Days (684 Orbits)</b> - Elemental Mapping</p>
+                </section>
+            </div>
+            
+            
+            
+        </div>
+    </div>
 
-      <section>
-        <h2>Overview</h2>
-        <p>
-          One of the most intriguing targets in the main asteroid belt, Psyche is a giant metal-rich asteroid, about three times farther away from the Sun than is Earth. Its average diameter is about 140 miles (226 kilometers) - about one-sixteenth the diameter of Earth's Moon or about the distance between Los Angeles and San Diego.
-        </p>
+    <footer>
+        <div class="container d-flex align-items-center">
+            <h3><strong>PSYCHE /</strong> Journey To A Metal World</h3>
+        </div>
+    </footer>
 
-        <p>
-          Psyche might be the partial core of a shattered planetesimal - a small world the size of a city or small country that is the first building block of a planet. If it is, asteroid Psyche can offer a close look at the interior of terrestrial planets like Earth which is normally hidden beneath layers of mantle and crust.
-        </p>
-
-        <!-- <p>
-
-        </p> -->
-
-      </section>
-
-      <section class="light">
-        <h2>NASA's Eyes On Asteroids</h2>
-
-        <p>
-            NASA's Eyes program provides a series of web apps that allow the public to see the solar system and the objects in it in real-time 3D.
-        </p>
-
-        <h2>Psyche's place in the Solar System</h2>
-
-        <iframe src="https://eyes.nasa.gov/apps/asteroids/#/asteroids/16_psyche" width="100%" height="560px"></iframe>
-
-      </section>
-
-      <section class="left">
-        <h2>Exploration</h2>
-
-        <h3>Psyche Mission</h3>
-        <p>
-          This intriguing asteroid is now the primary target of NASA's planned Psyche mission. The Psyche spacecraft is targeted to travel to the asteroid using solar-electric (low-thrust) propulsion, following a Mars flyby and a gravity assist.
-        </p>
-        <p>
-          Once in orbit, the spacecraft will map and study Psyche using a multispectral imager, a gamma-ray and neutron spectrometer, a magnetometer, and a radio instrument (for gravity measurement). The mission's goal is, among other things, to determine whether Psyche is indeed the core of a planetesimal.
-        </p>
-        <h3>How Psyche Asteroid Got Its Name</h3>
-        <p>
-          Psyche was discovered by Italian astronomer Annibale de Gasparis on March 17, 1852. He named the asteroid for Psyche, the Greek goddess of the soul who was born mortal and married Eros (Roman Cupid), the god of Love.
-        </p>
-
-      </section>
-
-      <blockquote>
-        <p>Thanks for watching!</p>
-      </blockquote>
-
-    </main>
-
-    <script type="module" src="/main.js"></script>
-  </body>
+</body>
 </html>
